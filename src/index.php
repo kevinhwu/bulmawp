@@ -11,9 +11,12 @@ get_header();
     <?php bulmawp_breadcrumbs(); ?>
     <div class="content">
       <?php
-      if( have_posts() ) : while( have_posts() ) : the_post();
-        get_template_part( 'content' );
-      endwhile; endif;
+      if( have_posts() ) :
+        while( have_posts() ) :
+          the_post();
+          get_template_part( 'content' );
+        endwhile;
+      endif;
       ?>
     </div>
     <?php bulmawp_pagination(); ?>

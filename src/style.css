@@ -1,11 +1,52 @@
 /*
-Theme Name: BulmaWP
-Theme URI: https://bulmawp.io/
-Author: Tom Hartley
-Author URI: https://tomhrtly.com/
-Description: A free WordPress starter theme based on the Bulma CSS framework.
-Version: 0.3
-License: GNU General Public License v3.0
-License URI: http://www.gnu.org/
-Text Domain: bulmawp
+main css
 */
+.mr {
+  margin-right: 1em;
+}
+
+.ml {
+  margin-left: 1em;
+}
+
+.mt0 {
+  margin-top: 1em;
+}
+
+.mb0 {
+  margin-bottom: 1em;
+}
+
+.row-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.grow {
+  flex-grow: 1; /* default 0 */
+}
+
+.post .title a {
+  color: #222;
+}
+
+.post-list-img{
+  flex-shrink: 0;
+  width:30%;
+  margin-right: 1rem;
+}
+
+.post-list-img img {
+  width:100%;
+  height:auto;
+}
+
+.post-list-body .title {
+  margin-top:0;
+}
