@@ -12,12 +12,14 @@ get_header();
     bulmawp_breadcrumbs();
     if( have_posts() ) : while( have_posts() ) : the_post();
     ?>
-      <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <h1 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+      <div id="post-<?php the_ID(); ?>" <?php post_class("box"); ?>>
+        <h1 class="title"><?php the_title(); ?></h1>
         <div class="content">
-          <p class="is-size-7"><?php echo __( 'In ' ); the_category( ', ' ); echo __( ' by ' ); the_author(); echo ' '; the_date( '', '/ ' ); ?> / <a href="<?php the_permalink(); ?>#comments"><?php comments_number( '0 comments', '1 comment', '% comments' ); ?></a></p>
+          <?php get_template_part( 'template-parts/entry', 'meta' ); ?>
+          <hr>
 					<?php the_content(); ?>
         </div>
+
 	      <?php
 	      $tags = get_tags();
 
